@@ -1,0 +1,8 @@
+<div class="container">
+  <h1>ビデオメッセージ</h1>
+  <% @videos.each do |video| %>
+    <iframe src="https://www.youtube.com/embed/<%= video.url %>" frameborder="0" allow="autoplay;"></iframe>
+    <p><%= video.author %></p>
+  <% end %>
+  <a href="/user">戻る</a>
+</div>

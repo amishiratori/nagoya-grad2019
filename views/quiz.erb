@@ -1,0 +1,10 @@
+<div class="container">
+  <p><%= @quiz.quiz %></p>
+  <form action="/quiz/check/<%= @quiz.id %>" method="post">
+    <input type="radio" name="select_answer" value="1"><%= @quiz.choice1 %> <br>
+    <input type="radio" name="select_answer" value="2"><%= @quiz.choice2 %> <br>
+    <input type="radio" name="select_answer" value="3"><%= @quiz.choice3 %> <br>
+    <button type="submit"><i class="fas fa-chevron-circle-right"></i></button>
+  </form>
+  <a href="/user">ホームにもどる</a>
+</div>

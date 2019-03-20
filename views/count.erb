@@ -1,0 +1,3 @@
+<% @users.each do |user| %>
+  <p><%= user.mentor_name %>,<%= user.questions.all.length %>コの質問,<%= user.videos.all.length %>コのビデオ。</p>
+<% end %>

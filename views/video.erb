@@ -1,0 +1,8 @@
+<div class="container">
+  <iframe src="https://www.youtube.com/embed/<%= @video.url %>" frameborder="0" allow="autoplay;"></iframe>
+  <p><%= @video.author %></p>
+  <% unless current_user.videos.where(played: false).blank? %>
+    <a href="/start_quiz">クイズに答える</a>
+  <% end %>
+  <a href="/user">メインページへ</a>
+</div>

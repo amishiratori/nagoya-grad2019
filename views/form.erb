@@ -1,0 +1,63 @@
+<div class="container">
+  <% if request.path_info == "/add_question" %>
+    <h1 class="form">クイズを追加</h1>
+    <form action="/post_question" method="post">
+      <div class="form-group">
+        あなたのメンター名:<input type="text" name="author">
+      </div>
+      <div class="form-group">
+        卒業メンター:
+        <select name="mentor">
+          <option value="1">じんちゃん</option>
+          <option value="2">さみー</option>
+          <option value="3">どらどら</option>
+          <option value="4">カロリーメイト</option>
+        </select>
+      </div>
+      <div class="form-group">
+        問題：<input type="text" name="quiz">
+      </div>
+      <div class="form-group">
+        選択肢1:<input type="text" name="choice1">
+      </div>
+      <div class="form-group">
+        選択肢2:<input type="text" name="choice2">
+      </div>
+      <div class="form-group">
+        選択肢3:<input type="text" name="choice3">
+      </div>
+      <div class="form-group">
+        答え：<select name="answer">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>番の選択肢
+      </div>
+      <div class="form-group">
+        <button type="submit" ><i class="far fa-paper-plane"></i></button>
+      </div>
+    </form>
+  <% else %>
+    <h1 class="form">ビデオを追加</h1>
+    <form action="/post_video" method="post">
+      <div class="form-group">
+        あなたのメンター名:<input type="text" name="author">
+      </div>
+      <div class="form-group">
+        卒業メンター:
+        <select name="mentor">
+          <option value="1">じんちゃん</option>
+          <option value="2">さみー</option>
+          <option value="3">どらどら</option>
+          <option value="4">カロリーメイト</option>
+        </select>
+      </div>
+      <div class="form-group">
+        YouTubeのID：<input type="text" name="url" textholder="url">
+      </div>
+      <div class="form-group">
+        <button type="submit"><i class="far fa-paper-plane"></i></button>
+      </div>
+    </form>
+  <% end %>
+</div>
