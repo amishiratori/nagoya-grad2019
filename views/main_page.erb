@@ -1,6 +1,6 @@
 <div class="container">
   <h1>さよならは、言わない。</h1>
-  <% if current_user.videos.find_by(played: false) %>
+  <% if current_user.questions.find_by(clear: false) %>
     <a href="/start_quiz">クイズに答える</a>
   <% end %>
   <a href="/video">再生済みの動画を見る</a>

@@ -87,7 +87,11 @@ get '/video/:id' do
 end
 
 get '/video' do
-  @videos = current_user.videos.where(played: true)
+  unless current_user.questions.find_by(clear: false)
+    @videos = current_user.videos.all
+  else
+    @videos = current_user.videos.where(played: true)
+  end
   erb :video_all
 end
 
